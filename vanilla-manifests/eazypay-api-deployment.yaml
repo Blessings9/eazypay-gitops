@@ -24,7 +24,7 @@ spec:
             
       containers:
       - name: eazypay-api
-        image: ghcr.io/blessings9/eazypay-backend:sha-918d488
+        image: ghcr.io/blessings9/eazypay-backend:sha-40c27e6
         ports:
         - containerPort: 5173
         volumeMounts:

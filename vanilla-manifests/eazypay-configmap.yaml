@@ -16,6 +16,6 @@ data:
       },
       "AllowedHosts": "*",
       "ConnectionStrings": {
-        "DefaultConnection": "Server=db_server;Database=eazypaydb;User Id=user;Password=password;"
+        "DefaultConnection": "Server=10.10.100.95;Database=eazypaydb;User Id=user;Password=p;"
       }
     }
