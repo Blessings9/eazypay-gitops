@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eazypay-api-deployment
+  labels:
+    app: eazypay-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eazypay-api
+  template:
+    metadata:
+      labels:
+        app: eazypay-api
+    spec:
+      volumes:
+      - name: config-volume
+        configMap:
+          name: appsettings-config
+          items:
+          - key: appsettings.json
+            path: appsettings.json
+            
+      containers:
+      - name: eazypay-api
+        image: ghcr.io/blessings9/eazypay-backend:sha-918d488
+        ports:
+        - containerPort: 5173
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/appsettings.json
+          subPath: appsettings.json
