@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eazypay-api-deployment
+  labels:
+    app: eazypay-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eazypay-api
+  template:
+    metadata:
+      labels:
+        app: eazypay-api
+    spec:
+      containers:
+      - name: eazypay-api
+        image: ghcr.io/blessings9/eazypay-backend:sha-918d488
+        ports:
+        - containerPort: 5173
