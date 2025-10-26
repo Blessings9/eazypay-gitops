@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: eazypay-frontend
-        image: ghcr.io/blessings9/eazypay-frontend:sha-40c27e6
+        image: ghcr.io/blessings9/eazypay-frontend:sha-b8ceb2e
         ports:
         - containerPort: 5173
