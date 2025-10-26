@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
     name: eazypay-ingress
     namespace: default
-  spec:
+spec:
     ingressClassName: nginx
     rules:
       - host: eazypay.infrasensei.com
